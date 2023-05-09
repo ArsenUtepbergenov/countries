@@ -9,16 +9,33 @@
   max-width: 100%;
 }
 
-// - Mobile: 375px
-// - Desktop: 1440px
-
 :root {
-  --dark-blue: hsl(209, 23%, 22%);
-  --very-dark-blue: hsl(207, 26%, 17%);
-  --white: hsl(0, 0%, 100%);
+  // dark
+  --dark-blue: hsl(209, 23%, 22%); // el
+  --dm-very-dark-blue: hsl(207, 26%, 17%); // bg
+  --white: hsl(0, 0%, 100%); // text; lm el
+
+  // light
+  --lm-very-dark-blue: hsl(200, 15%, 8%); // text
+  --dark-grey: hsl(0, 0%, 52%); // inputs
+  --very-light-grey: hsl(0, 0%, 98%); // bg
+
+  // default dark theme
+  --text-color: var(--white);
+  --bg-color: var(--dm-very-dark-blue);
+  --theme-color: var(--dark-blue);
+  --input: var(--dark-blue);
 }
 
 body {
   font-size: 14px;
   font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.row {
+  margin: 50px 0 60px 0;
 }

@@ -1,5 +1,13 @@
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
 - Mobile: 375px
 - Desktop: 1440px
+
+## Colors
 
 ### Neutral
 
@@ -9,6 +17,8 @@
 - Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
 - Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
 - White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+## Typography
 
 ### Body Copy
 
