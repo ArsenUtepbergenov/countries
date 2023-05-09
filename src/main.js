@@ -4,8 +4,8 @@ import router from '@/router'
 
 const pinia = createPinia()
 
-import App from './App.vue'
+import './index.scss'
 
-import './style.css'
+import App from './App.vue'
 
 createApp(App).use(router).use(pinia).mount('#app')
