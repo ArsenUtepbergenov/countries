@@ -3,15 +3,21 @@ import Nav from './layout/Nav/Nav.vue'
 import Main from './layout/Main/Main.vue'
 import Header from './layout/Header/Header.vue'
 import { useTheme } from './store/theme'
-import { ref, onMounted } from 'vue'
+import { ref, watch } from 'vue'
 
 const theme = useTheme()
 
 const page = ref(null)
 
-onMounted(() => {
-  page.value.classList.add(theme.value)
-})
+watch(
+  theme,
+  () => {
+    page.value?.classList.toggle('dark')
+  },
+  {
+    immediate: true,
+  },
+)
 </script>
 
 <template>
@@ -35,12 +41,5 @@ onMounted(() => {
   --bg-color: var(--dm-very-dark-blue);
   --theme-color: var(--dark-blue);
   --input: var(--dark-blue);
-}
-
-.light {
-  --text-color: var(--lm-very-dark-blue);
-  --bg-color: var(--very-light-grey);
-  --theme-color: var(--white);
-  --input: var(--dark-grey);
 }
 </style>

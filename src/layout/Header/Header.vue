@@ -1,12 +1,17 @@
 <script setup>
 import Switcher from '@/components/Inputs/Switcher.vue'
+import { useTheme } from '@/store/theme'
+
+const theme = useTheme()
 </script>
 
 <template>
   <header class="header">
     <div class="container header-content">
       <h1 class="title">Where in the world?</h1>
-      <Switcher />
+      <Switcher label="Dark mode" @change="theme.toggle">
+        <ion-icon :name="`moon${theme.dark ? '-outline' : ''}`" />
+      </Switcher>
     </div>
   </header>
 </template>

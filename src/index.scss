@@ -20,11 +20,11 @@
   --dark-grey: hsl(0, 0%, 52%); // inputs
   --very-light-grey: hsl(0, 0%, 98%); // bg
 
-  // default dark theme
-  --text-color: var(--white);
-  --bg-color: var(--dm-very-dark-blue);
-  --theme-color: var(--dark-blue);
-  --input: var(--dark-blue);
+  // default light theme
+  --text-color: var(--lm-very-dark-blue);
+  --bg-color: var(--very-light-grey);
+  --theme-color: var(--white);
+  --input: var(--dark-grey);
 }
 
 body {
