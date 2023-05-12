@@ -10,7 +10,7 @@ const theme = useTheme()
     <div class="container header-content">
       <h1 class="title">Where in the world?</h1>
       <Switcher label="Dark mode" @change="theme.toggle">
-        <ion-icon :name="`moon${theme.dark ? '-outline' : ''}`" />
+        <ion-icon :name="theme.dark ? 'moon' : 'moon-outline'" />
       </Switcher>
     </div>
   </header>

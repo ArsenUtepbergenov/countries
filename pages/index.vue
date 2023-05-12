@@ -1,8 +1,8 @@
 <script setup>
-import Nav from './layout/Nav/Nav.vue'
-import Main from './layout/Main/Main.vue'
-import Header from './layout/Header/Header.vue'
-import { useTheme } from './store/theme'
+import Nav from '@/layout/Nav/Nav.vue'
+import Main from '@/layout/Main/Main.vue'
+import Header from '@/layout/Header/Header.vue'
+import { useTheme } from '@/store/theme.js'
 import { ref, watch } from 'vue'
 
 const theme = useTheme()
@@ -21,6 +21,9 @@ watch(
 </script>
 
 <template>
+  <Head>
+    <Title>Countries</Title>
+  </Head>
   <div ref="page" class="page">
     <Header />
     <Nav />
