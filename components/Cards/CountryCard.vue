@@ -10,7 +10,7 @@ const { data } = toRefs(props)
 <template>
   <Card :style="{ width: '320px', height: '440px' }">
     <template #header>
-      <Image :src="data.flags.png" :alt="data.flags.alt" width="320" height="210" />
+      <img :src="data.flags.svg" :alt="data.flags.alt" width="320" height="210" />
     </template>
     <template #title>
       <span class="font-bold">{{ data.name.common }}</span>

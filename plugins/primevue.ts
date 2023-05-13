@@ -5,6 +5,7 @@ import Card from 'primevue/card'
 import Image from 'primevue/image'
 import Dropdown from 'primevue/dropdown'
 import InputText from 'primevue/inputtext'
+import ProgressSpinner from 'primevue/progressspinner'
 
 export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.vueApp.use(PrimeVue, { ripple: false })
@@ -13,5 +14,6 @@ export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.vueApp.component('Image', Image)
   nuxtApp.vueApp.component('Dropdown', Dropdown)
   nuxtApp.vueApp.component('InputText', InputText)
+  nuxtApp.vueApp.component('ProgressSpinner', ProgressSpinner)
   //other components that you need
 })

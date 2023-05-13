@@ -1,14 +1,27 @@
-import { fetchAllCountries } from '~/composable/fetchAllCountries'
-import { Countries } from '~/models/Country'
+import {
+  fetchAllCountries,
+  fetchCountriesByRegion,
+} from '~/composable/fetchAllCountries'
+import { Countries, FilterRegionItem, Region } from '~/models/Country'
 
 export const useCountriesStore = defineStore('countries', () => {
-  const countries = ref<Countries>([])
+  const all = ref<Countries>([])
+  const filteredCountries = ref<Countries>([])
+  const selectedRegion = ref<FilterRegionItem | null>(null)
+  const searchInputValue = ref('')
 
   async function fetchAll() {
-    countries.value = (await fetchAllCountries()) as Countries
+    all.value = (await fetchAllCountries()) as Countries
   }
 
-  const all = computed<Countries>(() => countries.value)
+  async function fetchByRegion(region: Region) {
+    filteredCountries.value = (await fetchCountriesByRegion(region)) as Countries
+  }
 
-  return { all, fetchAll }
+  const current = computed(() => {
+    if (selectedRegion.value === null) return all.value
+    return filteredCountries.value
+  })
+
+  return { current, selectedRegion, searchInputValue, fetchAll, fetchByRegion }
 })

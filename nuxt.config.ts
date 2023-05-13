@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  ssr: false,
   css: [
     '~/assets/css/theme.css',
     'primevue/resources/primevue.css',
