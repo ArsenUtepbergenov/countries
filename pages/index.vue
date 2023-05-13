@@ -32,6 +32,7 @@ watch(
 .page {
   color: var(--text-color);
   background: var(--bg-color);
+  min-height: 100vh;
 }
 
 .dark {

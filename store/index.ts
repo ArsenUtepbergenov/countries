@@ -1,7 +1,5 @@
-import {
-  fetchAllCountries,
-  fetchCountriesByRegion,
-} from '~/composable/fetchAllCountries'
+import { fetchAllCountries } from '~/composable/fetchAllCountries'
+import { fetchCountriesByRegion } from '~/composable/fetchCountriesByRegion'
 import { Countries, FilterRegionItem, Region } from '~/models/Country'
 
 export const useCountriesStore = defineStore('countries', () => {
@@ -18,9 +16,17 @@ export const useCountriesStore = defineStore('countries', () => {
     filteredCountries.value = (await fetchCountriesByRegion(region)) as Countries
   }
 
-  const current = computed(() => {
+  const filteredByRegion = computed(() => {
     if (selectedRegion.value === null) return all.value
     return filteredCountries.value
+  })
+
+  const current = computed(() => {
+    if (searchInputValue.value !== '') {
+      return filteredByRegion.value.filter(j =>
+        j.name.common.toLowerCase().includes(searchInputValue.value.toLowerCase()),
+      )
+    } else return filteredByRegion.value
   })
 
   return { current, selectedRegion, searchInputValue, fetchAll, fetchByRegion }

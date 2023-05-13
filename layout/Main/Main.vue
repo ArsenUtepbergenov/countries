@@ -9,7 +9,9 @@ import Countries from '~/components/Grid/Countries.vue'
         <Countries />
       </template>
       <template #fallback>
-        <ProgressSpinner strokeWidth="6" aria-label="Loading" />
+        <div class="flex justify-content-center align-item-center">
+          <ProgressSpinner strokeWidth="6" aria-label="Loading" />
+        </div>
       </template>
     </Suspense>
   </div>
