@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
-  css: ['~/assets/css/index.scss'],
+  css: [
+    '~/assets/css/theme.css',
+    'primevue/resources/primevue.css',
+    'primeflex/primeflex.css',
+    'primeicons/primeicons.css',
+    '~/assets/css/index.css',
+  ],
   modules: [
     // '@nuxt/devtools',
     '@pinia/nuxt',
@@ -18,5 +24,11 @@ export default defineNuxtConfig({
     compilerOptions: {
       isCustomElement: tag => ['ion-icon'].includes(tag),
     },
+  },
+  pinia: {
+    autoImports: ['defineStore'],
+  },
+  build: {
+    transpile: ['primevue'],
   },
 })

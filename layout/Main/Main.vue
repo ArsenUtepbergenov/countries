@@ -1,16 +1,22 @@
 <script setup lang="ts">
-const { $client } = useNuxtApp()
+import { useCountriesStore } from '~/store'
+import CountryCard from '~/components/Cards/CountryCard.vue'
 
-// for client side request
-const data = await $client.getBook.query({ id: 1 })
+const store = useCountriesStore()
 
-// for server side request
-// const { data } = await useAsyncData(() => $client.getBook.query({ id: 1 }));
+await store.fetchAll()
 </script>
 
 <template>
-  <div>
-    <h1>{{ data?.title }}</h1>
-    <h2>{{ data?.author }}</h2>
+  <div class="container">
+    <div class="grid">
+      <div
+        class="flex justify-content-center lg:justify-content-between col-12 md:col-6 lg:col-4 xl:col-3 mb-4"
+        v-for="country in store.all"
+        :key="country.name.common"
+      >
+        <CountryCard :data="country" />
+      </div>
+    </div>
   </div>
 </template>

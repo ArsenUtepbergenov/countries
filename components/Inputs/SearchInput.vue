@@ -12,20 +12,15 @@ function handleChange(e) {
 </script>
 
 <template>
-  <div class="search">
-    <input
-      class="search-input"
+  <span class="w-full p-input-icon-left">
+    <i class="pi pi-search" />
+    <InputText
       :value="modelValue"
       @change="handleChange"
       @input="handleInput"
+      placeholder="Search for a country..."
+      class="w-full border-none bs input"
+      style="padding-top: 18px; padding-bottom: 18px"
     />
-  </div>
+  </span>
 </template>
-
-<style lang="scss" scoped>
-.search {
-  &-input {
-    padding: 1rem 0.5rem;
-  }
-}
-</style>

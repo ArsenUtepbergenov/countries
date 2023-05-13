@@ -1,5 +1,10 @@
 <script setup></script>
 
 <template>
-  <NuxtPage />
+  <NuxtLayout>
+    <Head>
+      <Title>Countries</Title>
+    </Head>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

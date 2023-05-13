@@ -6,7 +6,7 @@ const theme = useTheme()
 </script>
 
 <template>
-  <header class="header">
+  <header class="header mb-4 bs">
     <div class="container header-content">
       <h1 class="title">Where in the world?</h1>
       <Switcher label="Dark mode" @change="theme.toggle">
@@ -18,7 +18,7 @@ const theme = useTheme()
 
 <style lang="scss" scoped>
 .header {
-  height: 160px;
+  height: 126px;
   background: var(--theme-color);
 
   .title {

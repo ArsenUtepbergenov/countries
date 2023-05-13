@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import Nav from '@/layout/Nav/Nav.vue'
 import Main from '@/layout/Main/Main.vue'
 import Header from '@/layout/Header/Header.vue'
-import { useTheme } from '@/store/theme.js'
 import { ref, watch } from 'vue'
+import { useTheme } from '~/store/theme'
 
 const theme = useTheme()
 
-const page = ref(null)
+const page = ref<HTMLElement | null>(null)
 
 watch(
   theme,
@@ -21,9 +21,6 @@ watch(
 </script>
 
 <template>
-  <Head>
-    <Title>Countries</Title>
-  </Head>
   <div ref="page" class="page">
     <Header />
     <Nav />
@@ -35,8 +32,6 @@ watch(
 .page {
   color: var(--text-color);
   background: var(--bg-color);
-
-  height: 100vh;
 }
 
 .dark {
@@ -44,5 +39,6 @@ watch(
   --bg-color: var(--dm-very-dark-blue);
   --theme-color: var(--dark-blue);
   --input: var(--dark-blue);
+  --bs: var(--bs-dark);
 }
 </style>

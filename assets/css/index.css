@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+:root {
+  /* dark */
+  --dark-blue: hsl(209, 23%, 22%);
+  --dm-very-dark-blue: hsl(207, 26%, 17%);
+  --white: hsl(0, 0%, 100%);
+  --bs-dark: 0px 0px 6px 2px #1b242e;
+
+  /* light */
+  --lm-very-dark-blue: hsl(200, 15%, 8%);
+  --dark-grey: hsl(0, 0%, 52%);
+  --very-light-grey: hsl(0, 0%, 98%);
+  --bs-light: 0px 0px 6px 2px #f0f0f0;
+
+  /* default light theme */
+  --text-color: var(--lm-very-dark-blue);
+  --bg-color: var(--very-light-grey);
+  --theme-color: var(--white);
+  --input: var(--dark-grey);
+  --bs: var(--bs-light);
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.bs {
+  box-shadow: var(--bs);
+}
+
+.dark .input {
+  background-color: var(--input);
+  color: var(--white);
+}
+
+.dark .input::placeholder {
+  color: var(--white);
+}
+
+.dark .p-input-icon-left > i:first-of-type {
+  color: var(--white);
+}
+
+.dark .p-dropdown .p-dropdown-label.p-placeholder {
+  color: var(--white);
+}
+
+.dark .p-inputtext {
+  color: var(--white);
+}
+
+.dark .p-dropdown .p-dropdown-trigger {
+  color: var(--white);
+}
+
+.dark .p-card {
+  background-color: var(--theme-color);
+  color: var(--white);
+}
