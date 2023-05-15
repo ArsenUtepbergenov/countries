@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
+  telemetry: false,
   css: [
     '~/assets/css/theme.css',
     'primevue/resources/primevue.css',

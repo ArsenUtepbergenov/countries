@@ -3,8 +3,6 @@ import { useCountriesStore } from '~/store'
 import CountryCard from '~/components/Cards/CountryCard.vue'
 
 const store = useCountriesStore()
-
-await store.fetchAll()
 </script>
 
 <template>

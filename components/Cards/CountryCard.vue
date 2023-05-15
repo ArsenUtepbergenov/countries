@@ -8,7 +8,7 @@ const { data } = toRefs(props)
 </script>
 
 <template>
-  <NuxtLink :to="`/details/${data.name.common}`">
+  <NuxtLink :to="`/${data.name.common}`">
     <Card :style="{ width: '320px', height: '440px' }">
       <template #header>
         <img :src="data.flags.svg" :alt="data.flags.alt" width="320" height="210" />

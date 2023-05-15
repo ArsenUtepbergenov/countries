@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import Countries from '~/components/Grid/Countries.vue'
+import { useCountriesStore } from '~/store'
+
+const store = useCountriesStore()
+
+await store.fetchAll()
 </script>
 
 <template>
-  <div class="container">
+  <main class="px-4 md:px-3">
     <Suspense :timeout="0">
       <template #default>
         <Countries />
@@ -14,5 +19,5 @@ import Countries from '~/components/Grid/Countries.vue'
         </div>
       </template>
     </Suspense>
-  </div>
+  </main>
 </template>

@@ -17,15 +17,13 @@ watch(
 </script>
 
 <template>
-  <nav class="nav">
-    <div class="container">
-      <div class="flex flex-column md:flex-row justify-content-between">
-        <div class="w-full md:w-5 mb-5">
-          <SearchInput v-model="store.searchInputValue" />
-        </div>
-        <div class="mb-5">
-          <RegionFilter v-model="store.selectedRegion" />
-        </div>
+  <nav class="px-4 md:px-3">
+    <div class="flex flex-column md:flex-row justify-content-between">
+      <div class="w-full md:w-5 mb-5">
+        <SearchInput v-model="store.searchInputValue" />
+      </div>
+      <div class="mb-5">
+        <RegionFilter v-model="store.selectedRegion" />
       </div>
     </div>
   </nav>

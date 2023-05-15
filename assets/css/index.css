@@ -34,8 +34,8 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.container {
-  padding: 0 1rem;
+a {
+  text-decoration: none;
 }
 
 .bs {
