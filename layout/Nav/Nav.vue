@@ -17,7 +17,7 @@ watch(
 </script>
 
 <template>
-  <nav class="px-4 md:px-3">
+  <nav class="px-4 md:px-3 lg:px-6">
     <div class="flex flex-column md:flex-row justify-content-between">
       <div class="w-full md:w-5 mb-5">
         <SearchInput v-model="store.searchInputValue" />

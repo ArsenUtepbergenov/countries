@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Country } from '~/models/Country'
+import useConvertor from '~/composable/useConvertor'
+
+const convertor = useConvertor()
 
 const props = defineProps<{
   data: Country
@@ -18,7 +21,10 @@ const { data } = toRefs(props)
       </template>
       <template #content>
         <div class="flex flex-column text-xl line-height-3">
-          <p><span class="font-semibold">Population: </span>{{ data.population }}</p>
+          <p>
+            <span class="font-semibold">Population: </span
+            >{{ convertor.parse(data.population) }}
+          </p>
           <p><span class="font-semibold">Region: </span>{{ data.region }}</p>
           <p><span class="font-semibold">Capital: </span>{{ data.capital[0] }}</p>
         </div>

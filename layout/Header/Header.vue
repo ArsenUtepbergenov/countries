@@ -7,7 +7,7 @@ const theme = useTheme()
 
 <template>
   <header class="header mb-4 bs">
-    <div class="px-4 md:px-3 header-content">
+    <div class="px-4 md:px-3 lg:px-6 header-content">
       <h1 class="title">Where in the world?</h1>
       <Switcher label="Dark mode" @change="theme.toggle">
         <ion-icon :name="theme.dark.value ? 'moon' : 'moon-outline'" />
